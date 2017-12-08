@@ -38,12 +38,13 @@ module.exports = function (gruntOrShipit) {
      */
 
     function copyPreviousRelease() {
-      var copyParameter = shipit.config.copy || '-a';
-      if (!shipit.previousRelease || shipit.config.copy === false) {
-        return Promise.resolve();
-      }
-      shipit.log('Copy previous release to "%s"', shipit.releasePath);
-      return shipit.remote(util.format('cp %s %s/. %s', copyParameter, path.join(shipit.releasesPath, shipit.previousRelease), shipit.releasePath));
+      return Promise.resolve();
+      //var copyParameter = shipit.config.copy || '-a';
+      //if (!shipit.previousRelease || shipit.config.copy === false) {
+      //  return Promise.resolve();
+      //}
+      //shipit.log('Copy previous release to "%s"', shipit.releasePath);
+      //return shipit.remote(util.format('cp %s %s/. %s', copyParameter, path.join(shipit.releasesPath, shipit.previousRelease), shipit.releasePath));
     }
 
     /**
